@@ -1,0 +1,4 @@
+C:\Users\Joaquin Peraza\Documents\GitHub\Soleado\Soleado\Soleado\bin\Soleado.dll
+C:\Users\Joaquin Peraza\Documents\GitHub\Soleado\Soleado\Soleado\bin\Soleado.pdb
+C:\Users\Joaquin Peraza\Documents\GitHub\Soleado\Soleado\Soleado\obj\Debug\Soleado.dll
+C:\Users\Joaquin Peraza\Documents\GitHub\Soleado\Soleado\Soleado\obj\Debug\Soleado.pdb

@@ -41,7 +41,7 @@ namespace Soleado
             get { return ciclo; }
             set { ciclo = value; }
         }
-        public void addCiudad(Ciudad ciudad) {
+        public virtual void addCiudad(Ciudad ciudad) {
             ciudades.Add(ciudad);
         }
         public void removeCiudad(Ciudad ciudad)

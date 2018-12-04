@@ -7,7 +7,7 @@ namespace Soleado
 {
     public class Free:Usuario
     {
-        public override void addCity(Ciudad city) {
+        public override void addCiudad(Ciudad city) {
             if (this.Ciudades.Count < 5)
             {
                 Ciudades.Add(city);
