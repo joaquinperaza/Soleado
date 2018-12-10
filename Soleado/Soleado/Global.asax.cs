@@ -9,11 +9,12 @@ namespace Soleado
 {
     public class Global : System.Web.HttpApplication
     {
-
+        public static DBManager db;
+        public static Usuario Usuario=new Usuario();
         void Application_Start(object sender, EventArgs e)
         {
             // Código que se ejecuta al iniciarse la aplicación
-
+            db = new DBManager();
         }
 
         void Application_End(object sender, EventArgs e)

@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-
+using System.Xml.Serialization;
 namespace Soleado
 {
+    [XmlInclude(typeof(Free))]
+    [XmlInclude(typeof(Premium))]
     public class Usuario
     {
         private String nombreDeUsuario;
@@ -21,33 +23,29 @@ namespace Soleado
             get { return hash; }
             set { hash = value; }
         }
-        private List<Ciudad> ciudades = new List<Ciudad>();
 
-        public List<Ciudad> Ciudades
-        {
-            get { return ciudades; }
-        }
-        private int metodo;
+        private String mail;
 
-        public int Metodo
+        public String Mail
         {
-            get { return metodo; }
-            set { metodo = value; }
+            get { return mail; }
+            set { mail = value; }
         }
-        private int ciclo;
+        private String telefono;
 
-        public int Ciclo
+        public String Telefono
         {
-            get { return ciclo; }
-            set { ciclo = value; }
+            get { return telefono; }
+            set { telefono = value; }
         }
-        public virtual void addCiudad(Ciudad ciudad) {
-            ciudades.Add(ciudad);
+
+       
+        public virtual void addTask(Task task) {
+            Global.db.addTask(task);
         }
-        public void removeCiudad(Ciudad ciudad)
+        public void removeCiudad(Task task)
         {
-            Ciudad c = ciudades.Find(x => x.name == ciudad.name);
-            ciudades.Remove(c);
+            Global.db.removeTask(task);
         }
 
     }
