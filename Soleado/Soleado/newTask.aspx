@@ -8,10 +8,10 @@
         Crear alerta</h2>
     <p>
         Nombre:<br />
-        <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
+        <asp:TextBox ID="localidad" runat="server"></asp:TextBox>
         <br />
         <br />
-        Localidad:<br />
+        Coordenadas:<br />
         <asp:TextBox ID="TextBox1" runat="server" Width="94px" ReadOnly="True"></asp:TextBox>
         ,<asp:TextBox ID="TextBox2" runat="server" Width="94px" ReadOnly="True"></asp:TextBox>
         <br />

@@ -24,7 +24,7 @@ namespace Soleado
                 try
                 {   Usuario auth=Global.db.auth(Session["Bearer Token"].ToString());
                     Task t = new Task();
-                    t.Name = TextBox3.Text;
+                    t.Name = localidad.Text;
                     t.Delay = Convert.ToInt32(DropDownList2.SelectedValue);
                     t.Metodo = Convert.ToInt32(DropDownList1.SelectedValue);
                     t.Lat = Convert.ToDouble(TextBox1.Text,  CultureInfo.GetCultureInfoByIetfLanguageTag("en-US"));

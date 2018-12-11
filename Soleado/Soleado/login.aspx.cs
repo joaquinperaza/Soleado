@@ -11,12 +11,12 @@ namespace Soleado
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Global.db.IsInit() == false) { Response.Redirect("register.aspx"); }
         }
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            Session["Bearer Token"] = Global.db.login(TextBox1.Text, TextBox2.Text).Hash;
+            Session["Bearer Token"] = Global.db.login(usuario.Text, clave.Text).Hash;
             Response.Redirect("Default.aspx");
         }
     }

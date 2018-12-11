@@ -131,8 +131,11 @@ namespace Soleado
             if (clima.Precipitation.Value == null) { clima.Precipitation.Value = "0"; }
             return clima;
         }
-        public Task getTask(String name){
-        return db.tasks.Find(t=>t.Name==name);
+        public Task getTask(String name,Usuario u){
+        return db.tasks.Find(t=>t.Name==name && t.Usuario.Hash==u.Hash);
+        }
+        public bool IsInit() {
+            if (db.users.Count == 0) { return false; } else { return true; }
         }
         
         //(Int32)(DateTime.UtcNow.Subtract(new DateTime(1970, 1, 1))).TotalSeconds-t.Delay

@@ -36,6 +36,8 @@
     <asp:TextBox ID="precipitaciones" runat="server"></asp:TextBox>
 &nbsp; mm<br />
     <br />
+    <asp:Button ID="Button1" runat="server" onclick="Button1_Click" 
+    Text="Eliminar" />
     <br />
     <br />
     <br />

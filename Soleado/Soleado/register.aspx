@@ -5,19 +5,19 @@
 
 <h2>Registro de usuarios</h2>
     <p>Nombre de usuario:<br />
-        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+        <asp:TextBox ID="usuario" runat="server"></asp:TextBox>
         <br />
         <br />
         Email:<br />
-        <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+        <asp:TextBox ID="email" runat="server"></asp:TextBox>
         <br />
         <br />
         Telefono:<br />
-        <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
+        <asp:TextBox ID="telefono" runat="server"></asp:TextBox>
         <br />
         <br />
         Clave:<br />
-        <asp:TextBox ID="TextBox4" runat="server" TextMode="Password"></asp:TextBox>
+        <asp:TextBox ID="clave" runat="server" TextMode="Password"></asp:TextBox>
         <br />
         <br />
         Tipo de membresia:<br />

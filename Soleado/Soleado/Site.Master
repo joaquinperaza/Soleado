@@ -8,6 +8,12 @@
     <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
     <asp:ContentPlaceHolder ID="HeadContent" runat="server">
     </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+            font-size: 46px;
+        }
+    </style>
 </head>
 <body>
     <form runat="server">
@@ -15,7 +21,14 @@
         <div class="header">
             <div class="title">
                 <h1>
-                    Mi aplicación ASP.NET
+                    <span class="style1">S<img alt="Ver las imágenes de origen" class="style1" 
+                        data-bm="9" 
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Sun_icon.svg/1020px-Sun_icon.svg.png" 
+                        style="height: 36px; width: 36px; bottom: 50px;" />LEAD</span><img 
+                        alt="Ver las imágenes de origen" class="style1" data-bm="9" 
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Sun_icon.svg/1020px-Sun_icon.svg.png" 
+                        style="height: 36px; width: 36px; bottom: 50px;" /><span class="style1">
+                    </span>
                 </h1>
             </div>
             <div class="loginDisplay">
@@ -33,7 +46,12 @@
                 <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal">
                     <Items>
                         <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Página principal"/>
-                        <asp:MenuItem NavigateUrl="~/About.aspx" Text="Acerca de"/>
+                        <asp:MenuItem Text="Usuario">
+                            <asp:MenuItem NavigateUrl="~/login.aspx" Text="Ingresar" Value="Ingresar">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/register.aspx" Text="Registro" Value="Registro">
+                            </asp:MenuItem>
+                        </asp:MenuItem>
                     </Items>
                 </asp:Menu>
             </div>

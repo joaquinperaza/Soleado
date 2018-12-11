@@ -22,10 +22,10 @@ namespace Soleado
             } else {
                 a = new Premium();
             }
-            a.NombreDeUsuario = TextBox1.Text;
-            a.Mail = TextBox2.Text;
-            a.Telefono = TextBox3.Text;
-            a.Hash = Global.db.CalculateMD5Hash(TextBox4.Text, a);
+            a.NombreDeUsuario = usuario.Text;
+            a.Mail = email.Text;
+            a.Telefono = telefono.Text;
+            a.Hash = Global.db.CalculateMD5Hash(clave.Text, a);
             
             
             Global.db.createUser(a);

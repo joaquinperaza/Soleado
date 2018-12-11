@@ -7,11 +7,11 @@
         Ingreso de usuarios</h2>
     <p>
         Nombre de usuario:<br />
-        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+        <asp:TextBox ID="usuario" runat="server"></asp:TextBox>
         <br />
         <br />
         Clave:<br />
-        <asp:TextBox ID="TextBox2" runat="server" TextMode="Password"></asp:TextBox>
+        <asp:TextBox ID="clave" runat="server" TextMode="Password"></asp:TextBox>
     </p>
     <p>
         <asp:Button ID="Button1" runat="server" onclick="Button1_Click" Text="Login" />
