@@ -43,6 +43,11 @@ namespace Soleado
         public virtual void addTask(Task task) {
             Global.db.addTask(task);
         }
+        public virtual Current getData(Double lat, Double lon) {
+            Current clima = Global.db.getData(lat, lon);
+            
+            return clima;
+        }
         public void removeCiudad(Task task)
         {
             Global.db.removeTask(task);

@@ -12,8 +12,8 @@
         <br />
         <br />
         Localidad:<br />
-        <asp:TextBox ID="TextBox1" runat="server" Width="94px"></asp:TextBox>
-        ,<asp:TextBox ID="TextBox2" runat="server" Width="94px"></asp:TextBox>
+        <asp:TextBox ID="TextBox1" runat="server" Width="94px" ReadOnly="True"></asp:TextBox>
+        ,<asp:TextBox ID="TextBox2" runat="server" Width="94px" ReadOnly="True"></asp:TextBox>
         <br />
         <br />
         Tipo de Alerta:<br />

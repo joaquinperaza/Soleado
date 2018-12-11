@@ -18,9 +18,8 @@ namespace Soleado
                 Usuario auth = Global.db.auth(Session["Bearer Token"].ToString());
                 List<Task> tt = Global.db.getTasks(auth);
                 JavaScriptSerializer serializer = new JavaScriptSerializer(); //creating serializer instance of JavaScriptSerializer class
-                
                 json = serializer.Serialize((object)tt);
-                
+                titulo.Text = "Bienvenido " + auth.NombreDeUsuario+"!";
                 
             }
             else

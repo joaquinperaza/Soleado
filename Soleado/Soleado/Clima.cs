@@ -116,8 +116,12 @@
         [XmlRoot(ElementName = "precipitation")]
         public class Precipitation
         {
+            [XmlAttribute(AttributeName = "value")]
+            public string Value { get; set; }
             [XmlAttribute(AttributeName = "mode")]
             public string Mode { get; set; }
+            [XmlAttribute(AttributeName = "unit")]
+            public string Unit { get; set; }
         }
 
         [XmlRoot(ElementName = "weather")]

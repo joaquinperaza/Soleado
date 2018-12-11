@@ -23,12 +23,14 @@ namespace Soleado
                 a = new Premium();
             }
             a.NombreDeUsuario = TextBox1.Text;
-            a.Hash = Global.db.CalculateMD5Hash(TextBox4.Text);
             a.Mail = TextBox2.Text;
             a.Telefono = TextBox3.Text;
+            a.Hash = Global.db.CalculateMD5Hash(TextBox4.Text, a);
+            
             
             Global.db.createUser(a);
             Session["Bearer Token"] = a.Hash;
+            Response.Redirect("Default.aspx");
         }
     }
 }

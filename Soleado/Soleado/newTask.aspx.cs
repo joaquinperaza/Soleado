@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Globalization;
 
 namespace Soleado
 {
@@ -26,11 +27,12 @@ namespace Soleado
                     t.Name = TextBox3.Text;
                     t.Delay = Convert.ToInt32(DropDownList2.SelectedValue);
                     t.Metodo = Convert.ToInt32(DropDownList1.SelectedValue);
-                    t.Lat = Convert.ToDouble(TextBox1.Text);
-                    t.Lon = Convert.ToDouble(TextBox2.Text);
+                    t.Lat = Convert.ToDouble(TextBox1.Text,  CultureInfo.GetCultureInfoByIetfLanguageTag("en-US"));
+                    t.Lon = Convert.ToDouble(TextBox2.Text, CultureInfo.GetCultureInfoByIetfLanguageTag("en-US"));
                     t.Last = 0;
                     t.Usuario = auth;
                     auth.addTask(t);
+                    Response.Redirect("Default.aspx");
 
                 }
                 catch (Exception e2) { 

@@ -13,7 +13,7 @@ namespace Soleado
     public class DBManager
     {
         private DB db = new DB();
-        public static String rutaArchivo = HttpRuntime.AppDomainAppPath + "db2.xml";
+        public static String rutaArchivo = HttpRuntime.AppDomainAppPath + "db.xml";
         public void guardardb()
         {
             System.Xml.Serialization.XmlSerializer writer =
@@ -48,10 +48,11 @@ namespace Soleado
             db.users.Add(u);
             guardardb();
         }
-        public string CalculateMD5Hash(string input)
-        {
+        public string CalculateMD5Hash(string input, Usuario u)
+        {   
             if (input != null)
             {
+                input += u.Mail + u.NombreDeUsuario;
                 // step 1, calculate MD5 hash from input
 
                 MD5 md5 = System.Security.Cryptography.MD5.Create();
@@ -76,7 +77,7 @@ namespace Soleado
             else { return "NO TEXT"; }
         }
         public Usuario login(String usuario, String pwd){
-            if (db.users.Find(b2 => b2.NombreDeUsuario == usuario).Hash == CalculateMD5Hash(pwd))
+            if (db.users.Find(b2 => b2.NombreDeUsuario == usuario).Hash == CalculateMD5Hash(pwd, db.users.Find(b2 => b2.NombreDeUsuario == usuario)))
             {
                 return db.users.Find(b2 => b2.NombreDeUsuario == usuario);
             }
@@ -117,15 +118,21 @@ namespace Soleado
         
         public Current getData(Double lat,Double lon)
         {
+            Current clima = new Current();
             XmlDocument document = new XmlDocument();
-            document.Load("http://api.openweathermap.org/data/2.5/weather?lat=" + lat.ToString() + "&lon=" + ToString() + "&appid=afb32eed00a636cea85290aa478f6365&lang=es&mode=xml");
+            document.Load("http://api.openweathermap.org/data/2.5/weather?lat=" + lat.ToString() + "&lon=" + lon.ToString() + "&appid=afb32eed00a636cea85290aa478f6365&lang=es&mode=xml&&units=metric");
             var serializer = new XmlSerializer(typeof(Current));
             object result;
             using (TextReader reader = new StringReader(document.InnerXml))
             {
                 result = serializer.Deserialize(reader);
             }
-            return (Current)result;
+            clima=(Current)result;
+            if (clima.Precipitation.Value == null) { clima.Precipitation.Value = "0"; }
+            return clima;
+        }
+        public Task getTask(String name){
+        return db.tasks.Find(t=>t.Name==name);
         }
         
         //(Int32)(DateTime.UtcNow.Subtract(new DateTime(1970, 1, 1))).TotalSeconds-t.Delay

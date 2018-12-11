@@ -5,13 +5,12 @@
 </asp:Content>
 <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
     <h2>
-        ASP.NET
+        <asp:Label ID="titulo" runat="server"></asp:Label>
     </h2>
     <p>
-        Para obtener más información acerca de ASP.NET, visite <a href="http://www.asp.net" title="Sitio web de ASP.NET">www.asp.net</a>.
-    </p>
+        &nbsp;</p>
     <div id="map" style="width: 100%; height: 500px"></div>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript">
     var myTasks = <%=json%>;
  
@@ -298,13 +297,21 @@
           zoom: 8,
           styles: style
         });
+        function geticon(lat,lon){
+        
+        }
         myTasks.forEach(function(item){
         var pos = {lat: item.Lat, lng: item.Lon};
-        var marker = new google.maps.Marker({position: pos, map: map, animation: google.maps.Animation.DROP, title:item.Name});
-        marker.addListener('click', function() {
+        $.getJSON( "http://api.openweathermap.org/data/2.5/weather?lat="+item.Lat.toString()+"&lon="+item.Lon.toString()+"&appid=afb32eed00a636cea85290aa478f6365&lang=es&mode=json&&units=metric", function( data ) { 
+             var marker = new google.maps.Marker({position: pos, icon: "http://openweathermap.org/img/w/"+data.weather[0].icon+".png" ,map: map, animation: google.maps.Animation.DROP, title: item.Name});
+              marker.addListener('click', function() {
           var url= "/detail.aspx?name="+marker.title;
             document.location.href = url;
         });
+         });
+
+       
+       
         });
         map.addListener('click', function(e) {
         var url= "/newTask.aspx?lat="+e.latLng.lat().toString()+"&lon="+e.latLng.lng();

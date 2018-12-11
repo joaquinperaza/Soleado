@@ -17,6 +17,7 @@ namespace Soleado
         protected void Button1_Click(object sender, EventArgs e)
         {
             Session["Bearer Token"] = Global.db.login(TextBox1.Text, TextBox2.Text).Hash;
+            Response.Redirect("Default.aspx");
         }
     }
 }
