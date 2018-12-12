@@ -8,6 +8,6 @@ namespace Soleado
     public class DB
     {
         public List<Usuario>users=new List<Usuario>();
-        public List<Task> tasks=new List<Task>();
+        public List<ClimaTask> tasks=new List<ClimaTask>();
     }
 }

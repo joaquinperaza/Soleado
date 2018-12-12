@@ -7,7 +7,7 @@ namespace Soleado
 {
     public class Free:Usuario
     {
-        public override void addTask(Task task) {
+        public override void addTask(ClimaTask task) {
             Global.db.addTaskFree(task);
 
         }

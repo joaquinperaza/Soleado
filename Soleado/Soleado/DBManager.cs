@@ -91,11 +91,11 @@ namespace Soleado
         {
             return db.users.Find(b2 => b2.Hash == token);
         }
-        public void addTask(Task t) {
+        public void addTask(ClimaTask t) {
             db.tasks.Add(t);
             guardardb();
         }
-        public void addTaskFree(Task t) {
+        public void addTaskFree(ClimaTask t) {
             if (db.tasks.FindAll(e2 => e2.Usuario.Hash == t.Usuario.Hash).Count < 5)
             {
                 db.tasks.Add(t);
@@ -107,14 +107,40 @@ namespace Soleado
         }
 
         
-        public void removeTask(Task t)
+        public void removeTask(ClimaTask t)
         {
             db.tasks.Remove(t);
             guardardb();
         }
-        public List<Task> getTasks(Usuario u) {
+        public void AlertService(){
+            List<ClimaTask> tasks = db.tasks;
+            try
+            {
+                foreach (ClimaTask t in tasks)
+                {
+                    if ((Int32)(DateTime.UtcNow.Subtract(new DateTime(1970, 1, 1))).TotalSeconds - t.Last > t.Delay)
+                    {
+                        try
+                        {
+                            Current clima = t.Usuario.getData(t.Lat, t.Lon);
+                            if (t.Metodo > 0)
+                            {
+                                new EmailNotification(t, clima);
+                            }
+                            t.Last = (Int32)(DateTime.UtcNow.Subtract(new DateTime(1970, 1, 1))).TotalSeconds;
+                        }
+                        catch { }
+                    }
+                }
+               
+                
+            }catch{}
+        
+        }
+        public List<ClimaTask> getTasks(Usuario u) {
             return db.tasks.FindAll(e2 => e2.Usuario.Hash == u.Hash);
         }
+        
         
         public Current getData(Double lat,Double lon)
         {
@@ -131,7 +157,7 @@ namespace Soleado
             if (clima.Precipitation.Value == null) { clima.Precipitation.Value = "0"; }
             return clima;
         }
-        public Task getTask(String name,Usuario u){
+        public ClimaTask getTask(String name,Usuario u){
         return db.tasks.Find(t=>t.Name==name && t.Usuario.Hash==u.Hash);
         }
         public bool IsInit() {

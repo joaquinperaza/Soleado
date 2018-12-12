@@ -23,13 +23,13 @@ namespace Soleado
             {
                 try
                 {   Usuario auth=Global.db.auth(Session["Bearer Token"].ToString());
-                    Task t = new Task();
+                    ClimaTask t = new ClimaTask();
                     t.Name = localidad.Text;
                     t.Delay = Convert.ToInt32(DropDownList2.SelectedValue);
                     t.Metodo = Convert.ToInt32(DropDownList1.SelectedValue);
                     t.Lat = Convert.ToDouble(TextBox1.Text,  CultureInfo.GetCultureInfoByIetfLanguageTag("en-US"));
                     t.Lon = Convert.ToDouble(TextBox2.Text, CultureInfo.GetCultureInfoByIetfLanguageTag("en-US"));
-                    t.Last = 0;
+                    t.Last = (Int32)(DateTime.UtcNow.Subtract(new DateTime(1970, 1, 1))).TotalSeconds-t.Delay;
                     t.Usuario = auth;
                     auth.addTask(t);
                     Response.Redirect("Default.aspx");

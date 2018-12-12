@@ -40,7 +40,7 @@ namespace Soleado
         }
 
        
-        public virtual void addTask(Task task) {
+        public virtual void addTask(ClimaTask task) {
             Global.db.addTask(task);
         }
         public virtual Current getData(Double lat, Double lon) {
@@ -48,7 +48,7 @@ namespace Soleado
             
             return clima;
         }
-        public void removeCiudad(Task task)
+        public void removeCiudad(ClimaTask task)
         {
             Global.db.removeTask(task);
         }

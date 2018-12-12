@@ -165,6 +165,19 @@
             public Weather Weather { get; set; }
             [XmlElement(ElementName = "lastupdate")]
             public Lastupdate Lastupdate { get; set; }
+
+            public override string ToString() {
+                String s = "";
+                s += "Clima para la ciudad de " + this.City.Name+"\n";
+                s += "Estado actual: " + this.Weather.Value.ToUpper() + "\n";
+                s += "Temperatura: " + this.Temperature.Value + " ºC\n";
+                s += "Humedad: " + this.Humidity.Value +  " %\n";
+                s += "Presion: " + this.Pressure.Value +  " hPa\n";
+                s += "Viento: " + this.Wind.Speed.Value + "k/h "+this.Wind.Direction.Code + "\n";
+                s += "Nubosidad: " + this.Clouds.Value + " %\n";
+                s += "Precipitaciones: " + this.Precipitation.Value + " mm\n";
+                return s;
+            }
         }
 
     }

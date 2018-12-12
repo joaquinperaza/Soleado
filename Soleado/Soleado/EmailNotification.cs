@@ -9,16 +9,14 @@ namespace Soleado
 {
     public class EmailNotification
     {
-        public EmailNotification(Task t)
+        public EmailNotification(ClimaTask t,Current c)
         {
 
-
                 MailMessage msg = new MailMessage();
-                msg.From = new MailAddress("barcobus.noreply@gmail.com");
+                msg.From = new MailAddress("soleado.noreply@gmail.com");
                 msg.To.Add(t.Usuario.Mail);
-                msg.Subject = t.Usuario.NombreDeUsuario+" Soleado - Actualizacion climatica";
-                msg.Body = "";
-
+                msg.Subject = " Soleado - Actualizacion climatica - "+t.Usuario.NombreDeUsuario+" - "+t.Name;;
+                msg.Body = c.ToString();
                 //msg.Attachments.Add(new Attachment(attachedFile)); 
 
                 SmtpClient smt = new SmtpClient();

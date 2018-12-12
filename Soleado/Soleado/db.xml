@@ -15,21 +15,7 @@
     </Usuario>
   </users>
   <tasks>
-    <Task>
-      <Delay>3600</Delay>
-      <Name>Salto</Name>
-      <Usuario xsi:type="Free">
-        <NombreDeUsuario>admin</NombreDeUsuario>
-        <Hash>300A7600BC9CAC80268C00F96ECCBBAA</Hash>
-        <Mail>joaquin@peraza.uy</Mail>
-        <Telefono>099355553</Telefono>
-      </Usuario>
-      <Lat>-31.41008250160851</Lat>
-      <Lon>-57.9173583984375</Lon>
-      <Last>0</Last>
-      <Metodo>1</Metodo>
-    </Task>
-    <Task>
+    <ClimaTask>
       <Delay>3600</Delay>
       <Name>Paysandu</Name>
       <Usuario xsi:type="Free">
@@ -38,124 +24,40 @@
         <Mail>joaquin@peraza.uy</Mail>
         <Telefono>099355553</Telefono>
       </Usuario>
-      <Lat>-32.343009948081239</Lat>
+      <Lat>-32.308381718369176</Lat>
       <Lon>-58.065673828125</Lon>
-      <Last>0</Last>
+      <Last>1544632983</Last>
       <Metodo>1</Metodo>
-    </Task>
-    <Task>
-      <Delay>3600</Delay>
-      <Name>Guichon</Name>
-      <Usuario xsi:type="Free">
-        <NombreDeUsuario>admin</NombreDeUsuario>
-        <Hash>300A7600BC9CAC80268C00F96ECCBBAA</Hash>
-        <Mail>joaquin@peraza.uy</Mail>
-        <Telefono>099355553</Telefono>
-      </Usuario>
-      <Lat>-32.403322270621651</Lat>
-      <Lon>-57.1922607421875</Lon>
-      <Last>0</Last>
-      <Metodo>1</Metodo>
-    </Task>
-    <Task>
-      <Delay>3600</Delay>
-      <Name>Eucalipto</Name>
-      <Usuario xsi:type="Free">
-        <NombreDeUsuario>admin</NombreDeUsuario>
-        <Hash>300A7600BC9CAC80268C00F96ECCBBAA</Hash>
-        <Mail>joaquin@peraza.uy</Mail>
-        <Telefono>099355553</Telefono>
-      </Usuario>
-      <Lat>-31.956992323000044</Lat>
-      <Lon>-57.2581787109375</Lon>
-      <Last>0</Last>
-      <Metodo>1</Metodo>
-    </Task>
-    <Task>
-      <Delay>3600</Delay>
-      <Name>Paysandu</Name>
-      <Usuario xsi:type="Premium">
-        <NombreDeUsuario>admin2</NombreDeUsuario>
-        <Hash>8970D0265CE2443FCD7F1EC6E227CFC8</Hash>
-        <Mail>joaquin@peraza.uy</Mail>
-        <Telefono>099355553</Telefono>
-      </Usuario>
-      <Lat>-32.38012998684632</Lat>
-      <Lon>-58.0546875</Lon>
-      <Last>0</Last>
-      <Metodo>1</Metodo>
-    </Task>
-    <Task>
+    </ClimaTask>
+    <ClimaTask>
       <Delay>3600</Delay>
       <Name>Quebracho</Name>
+      <Usuario xsi:type="Free">
+        <NombreDeUsuario>admin</NombreDeUsuario>
+        <Hash>300A7600BC9CAC80268C00F96ECCBBAA</Hash>
+        <Mail>joaquin@peraza.uy</Mail>
+        <Telefono>099355553</Telefono>
+      </Usuario>
+      <Lat>-31.973489478810958</Lat>
+      <Lon>-57.9063720703125</Lon>
+      <Last>1544632987</Last>
+      <Metodo>1</Metodo>
+    </ClimaTask>
+    <ClimaTask>
+      <Delay>3600</Delay>
+      <Name>Salto</Name>
       <Usuario xsi:type="Premium">
         <NombreDeUsuario>admin2</NombreDeUsuario>
         <Hash>8970D0265CE2443FCD7F1EC6E227CFC8</Hash>
         <Mail>joaquin@peraza.uy</Mail>
         <Telefono>099355553</Telefono>
       </Usuario>
-      <Lat>-32.00358700511876</Lat>
+      <Lat>-31.426677162122434</Lat>
       <Lon>-57.8953857421875</Lon>
-      <Last>0</Last>
+      <Last>1544633288</Last>
       <Metodo>1</Metodo>
-    </Task>
-    <Task>
-      <Delay>3600</Delay>
-      <Name>Eucalipto</Name>
-      <Usuario xsi:type="Premium">
-        <NombreDeUsuario>admin2</NombreDeUsuario>
-        <Hash>8970D0265CE2443FCD7F1EC6E227CFC8</Hash>
-        <Mail>joaquin@peraza.uy</Mail>
-        <Telefono>099355553</Telefono>
-      </Usuario>
-      <Lat>-31.952331553718821</Lat>
-      <Lon>-57.24169921875</Lon>
-      <Last>0</Last>
-      <Metodo>1</Metodo>
-    </Task>
-    <Task>
-      <Delay>3600</Delay>
-      <Name>Guichon</Name>
-      <Usuario xsi:type="Premium">
-        <NombreDeUsuario>admin2</NombreDeUsuario>
-        <Hash>8970D0265CE2443FCD7F1EC6E227CFC8</Hash>
-        <Mail>joaquin@peraza.uy</Mail>
-        <Telefono>099355553</Telefono>
-      </Usuario>
-      <Lat>-32.394046071814863</Lat>
-      <Lon>-57.1922607421875</Lon>
-      <Last>0</Last>
-      <Metodo>1</Metodo>
-    </Task>
-    <Task>
-      <Delay>3600</Delay>
-      <Name>Arbolito</Name>
-      <Usuario xsi:type="Premium">
-        <NombreDeUsuario>admin2</NombreDeUsuario>
-        <Hash>8970D0265CE2443FCD7F1EC6E227CFC8</Hash>
-        <Mail>joaquin@peraza.uy</Mail>
-        <Telefono>099355553</Telefono>
-      </Usuario>
-      <Lat>-32.273368820803661</Lat>
-      <Lon>-56.4781494140625</Lon>
-      <Last>0</Last>
-      <Metodo>1</Metodo>
-    </Task>
-    <Task>
-      <Delay>3600</Delay>
-      <Name>Young</Name>
-      <Usuario xsi:type="Premium">
-        <NombreDeUsuario>admin2</NombreDeUsuario>
-        <Hash>8970D0265CE2443FCD7F1EC6E227CFC8</Hash>
-        <Mail>joaquin@peraza.uy</Mail>
-        <Telefono>099355553</Telefono>
-      </Usuario>
-      <Lat>-32.745870376353508</Lat>
-      <Lon>-57.6317138671875</Lon>
-      <Last>0</Last>
-      <Metodo>1</Metodo>
-    </Task>
-    <Task>
+    </ClimaTask>
+    <ClimaTask>
       <Delay>3600</Delay>
       <Name>Tacuarembo</Name>
       <Usuario xsi:type="Premium">
@@ -164,52 +66,52 @@
         <Mail>joaquin@peraza.uy</Mail>
         <Telefono>099355553</Telefono>
       </Usuario>
-      <Lat>-31.765707068254592</Lat>
-      <Lon>-55.9837646484375</Lon>
-      <Last>0</Last>
+      <Lat>-31.712169525984969</Lat>
+      <Lon>-55.978271484375</Lon>
+      <Last>1544634392</Last>
       <Metodo>1</Metodo>
-    </Task>
-    <Task>
+    </ClimaTask>
+    <ClimaTask>
       <Delay>3600</Delay>
-      <Name>Salto</Name>
-      <Usuario xsi:type="Premium">
-        <NombreDeUsuario>admin2</NombreDeUsuario>
-        <Hash>8970D0265CE2443FCD7F1EC6E227CFC8</Hash>
-        <Mail>joaquin@peraza.uy</Mail>
-        <Telefono>099355553</Telefono>
-      </Usuario>
-      <Lat>-31.438207429592165</Lat>
-      <Lon>-57.9503173828125</Lon>
-      <Last>0</Last>
-      <Metodo>1</Metodo>
-    </Task>
-    <Task>
-      <Delay>3600</Delay>
-      <Name>Paso de los Toros</Name>
-      <Usuario xsi:type="Premium">
-        <NombreDeUsuario>admin2</NombreDeUsuario>
-        <Hash>8970D0265CE2443FCD7F1EC6E227CFC8</Hash>
-        <Mail>joaquin@peraza.uy</Mail>
-        <Telefono>099355553</Telefono>
-      </Usuario>
-      <Lat>-32.852071093927634</Lat>
-      <Lon>-56.5111083984375</Lon>
-      <Last>0</Last>
-      <Metodo>1</Metodo>
-    </Task>
-    <Task>
-      <Delay>3600</Delay>
-      <Name>Arbolito</Name>
+      <Name>Merino</Name>
       <Usuario xsi:type="Free">
         <NombreDeUsuario>admin</NombreDeUsuario>
         <Hash>300A7600BC9CAC80268C00F96ECCBBAA</Hash>
         <Mail>joaquin@peraza.uy</Mail>
         <Telefono>099355553</Telefono>
       </Usuario>
-      <Lat>-32.238713977311711</Lat>
-      <Lon>-56.483642578125</Lon>
-      <Last>0</Last>
+      <Lat>-32.40582661437508</Lat>
+      <Lon>-56.901123046875</Lon>
+      <Last>1544634395</Last>
       <Metodo>1</Metodo>
-    </Task>
+    </ClimaTask>
+    <ClimaTask>
+      <Delay>3600</Delay>
+      <Name>Tacuarembo</Name>
+      <Usuario xsi:type="Free">
+        <NombreDeUsuario>admin</NombreDeUsuario>
+        <Hash>300A7600BC9CAC80268C00F96ECCBBAA</Hash>
+        <Mail>joaquin@peraza.uy</Mail>
+        <Telefono>099355553</Telefono>
+      </Usuario>
+      <Lat>-31.730859769019382</Lat>
+      <Lon>-55.9892578125</Lon>
+      <Last>1544634448</Last>
+      <Metodo>1</Metodo>
+    </ClimaTask>
+    <ClimaTask>
+      <Delay>3600</Delay>
+      <Name>Young</Name>
+      <Usuario xsi:type="Free">
+        <NombreDeUsuario>admin</NombreDeUsuario>
+        <Hash>300A7600BC9CAC80268C00F96ECCBBAA</Hash>
+        <Mail>joaquin@peraza.uy</Mail>
+        <Telefono>099355553</Telefono>
+      </Usuario>
+      <Lat>-32.716018952140395</Lat>
+      <Lon>-57.6536865234375</Lon>
+      <Last>1544630898</Last>
+      <Metodo>1</Metodo>
+    </ClimaTask>
   </tasks>
 </DB>

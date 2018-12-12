@@ -5,7 +5,7 @@ using System.Web;
 
 namespace Soleado
 {
-    public class Task
+    public class ClimaTask
     {
         private int delay;
 
