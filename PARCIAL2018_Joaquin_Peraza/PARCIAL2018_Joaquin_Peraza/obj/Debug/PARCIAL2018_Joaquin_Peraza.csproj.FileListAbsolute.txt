@@ -1,0 +1,4 @@
+C:\Users\Joaquin Peraza\Documents\GitHub\Soleado\PARCIAL2018_Joaquin_Peraza\PARCIAL2018_Joaquin_Peraza\bin\PARCIAL2018_Joaquin_Peraza.dll
+C:\Users\Joaquin Peraza\Documents\GitHub\Soleado\PARCIAL2018_Joaquin_Peraza\PARCIAL2018_Joaquin_Peraza\bin\PARCIAL2018_Joaquin_Peraza.pdb
+C:\Users\Joaquin Peraza\Documents\GitHub\Soleado\PARCIAL2018_Joaquin_Peraza\PARCIAL2018_Joaquin_Peraza\obj\Debug\PARCIAL2018_Joaquin_Peraza.dll
+C:\Users\Joaquin Peraza\Documents\GitHub\Soleado\PARCIAL2018_Joaquin_Peraza\PARCIAL2018_Joaquin_Peraza\obj\Debug\PARCIAL2018_Joaquin_Peraza.pdb
