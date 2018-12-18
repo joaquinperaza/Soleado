@@ -15,7 +15,7 @@ namespace Soleado
                 MailMessage msg = new MailMessage();
                 msg.From = new MailAddress("soleado.noreply@gmail.com");
                 msg.To.Add(t.Usuario.Mail);
-                msg.Subject = " Soleado - Actualizacion climatica - "+t.Usuario.NombreDeUsuario+" - "+t.Name;;
+                msg.Subject = " Soleado - Actualizacion climatica - " + t.Usuario.NombreDeUsuario + " - " + t.Name; ;
                 msg.Body = c.ToString();
                 //msg.Attachments.Add(new Attachment(attachedFile)); 
 
